@@ -10,13 +10,14 @@ public class Main {
 
 			System.out.print("Divisor: ");
 			int divisor = scanner.nextInt();
-
-			if (divisor == 0) {
-				throw new ArithmeticException("Cannot divide by 0");
-			} else {
-				int quotient = (dividend / divisor);
+			int quotient = 0;
+			try {
+				quotient = (dividend / divisor);
+			} catch (ArithmeticException e){
+				System.out.println("Cannot divide by 0");
+			}
 				System.out.println("Quotient: " + quotient);
 			}
 		}
 	}
-}
+
