@@ -14,7 +14,7 @@ public class Main {
 			try {
 				quotient = (dividend / divisor);
 			} catch (ArithmeticException e){
-				System.out.println("Cannot divide by 0");
+				throw new ArithmeticException();
 			}
 				System.out.println("Quotient: " + quotient);
 			}
